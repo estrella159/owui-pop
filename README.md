@@ -103,7 +103,3 @@ against a fake server.
 ## Licence
 
 MIT
-
----
-
-_Signed: claude-code (claude-opus-5-5) · 2026-11-16T07:40:00Z_
