@@ -7,6 +7,8 @@ opens it in Open WebUI to carry on there.
 It is a small native app (Python and Qt 6), not a browser window, so it opens instantly and stays out
 of the way.
 
+<p align="center"><img src="docs/answer.png" alt="owui-pop with an answer" width="600"></p>
+
 ## What it does
 
 - **Answers in place.** The answer streams into the pop-up. Scroll up to read while it writes: the view
@@ -30,6 +32,8 @@ of the way.
 | Ctrl+, | Settings |
 
 Drag any empty part of the pop-up (its edges or the status line) to move it.
+
+<p align="center"><img src="docs/settings.png" alt="owui-pop settings" width="560"></p>
 
 ## Install
 
