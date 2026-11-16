@@ -21,7 +21,7 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from . import client, config, position
+from . import client, config, position, render
 
 HINT = "Enter send · Esc hide · Ctrl+N new · Ctrl+O open in Open WebUI · Ctrl+, settings"
 EXPANDED_H = 560
@@ -81,7 +81,8 @@ class Message(QLabel):
         self.show_text(text)
 
     def show_text(self, text: str) -> None:
-        self.setText(text or "…")
+        # what the user typed is shown as typed; answers get Open WebUI's line breaks and readable maths
+        self.setText((render.for_display(text) if self.objectName() == "answer" else text) or "…")
 
 
 class Conversation(QScrollArea):
