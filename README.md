@@ -1,5 +1,7 @@
 # owui-pop
 
+[![ci](https://github.com/estrella159/owui-pop/actions/workflows/ci.yml/badge.svg)](https://github.com/estrella159/owui-pop/actions/workflows/ci.yml)
+
 A quick-ask pop-up for [Open WebUI](https://github.com/open-webui/open-webui) on the Linux desktop.
 Press a key, type a question, read the answer in place. Follow-ups continue the same chat, and one key
 opens it in Open WebUI to carry on there.
