@@ -107,6 +107,8 @@ class SettingsDialog(QDialog):
         self.open_with.addItems(["Default browser", "Command"])
         self.open_command = QLineEdit()
         self.open_command.setPlaceholderText("e.g. firefox --new-window {url}")
+        self.open_command.textChanged.connect(self.open_command.setToolTip)
+        self.open_command.editingFinished.connect(lambda: self.open_command.setCursorPosition(0))
         self.open_with.currentIndexChanged.connect(lambda i: self.open_command.setEnabled(i == 1))
         help_key = QLabel("Create a key in Open WebUI under Settings → Account → API keys. It is saved in its own "
                           "file that only you can read, and never shown here again.")
@@ -163,6 +165,8 @@ class SettingsDialog(QDialog):
             self.model.setCurrentText(s.model)
         self.open_with.setCurrentIndex(1 if s.open_command else 0)
         self.open_command.setText(s.open_command)
+        self.open_command.setCursorPosition(0)  # a long command shows its start, not its end
+        self.open_command.setToolTip(s.open_command)
         self.open_command.setEnabled(bool(s.open_command))
         self.test_result.clear()
         self._loading = False
