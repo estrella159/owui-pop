@@ -9,6 +9,7 @@ opens it in Open WebUI to carry on there.
 It is a small native app (Python and Qt 6), not a browser window, so it opens instantly and stays out
 of the way.
 
+<p align="center"><img src="docs/start.png" alt="owui-pop when it opens, ready for a question" width="600"></p>
 <p align="center"><img src="docs/answer.png" alt="owui-pop with an answer" width="600"></p>
 
 ## What it does
