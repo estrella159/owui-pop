@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=owui-pop
+GenericName=Quick ask for Open WebUI
+Comment=Ask Open WebUI a quick question from anywhere
+Exec=owui-pop
+Icon=dialog-question
+Categories=Utility;Network;
+Keywords=ai;llm;chat;open-webui;ask;
+StartupWMClass=owui-pop
+Actions=settings;
+
+[Desktop Action settings]
+Name=Settings
+Exec=owui-pop --settings

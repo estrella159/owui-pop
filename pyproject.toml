@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "owui-pop"
+version = "0.1.0"
+description = "A quick-ask pop-up for Open WebUI: press a key, ask, read the answer, carry on in Open WebUI"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["PyQt6>=6.5", "httpx>=0.25"]
+keywords = ["open-webui", "llm", "launcher", "pyqt6", "linux"]
+classifiers = [
+  "Environment :: X11 Applications :: Qt",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/estrella159/owui-pop"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+owui-pop = "owui_pop.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 130
