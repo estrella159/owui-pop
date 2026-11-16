@@ -11,6 +11,9 @@ fi
 apps="${XDG_DATA_HOME:-$HOME/.local/share}/applications"
 mkdir -p "$apps"
 cp "$here/data/owui-pop.desktop" "$apps/owui-pop.desktop"
+icons="${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/scalable/apps"
+mkdir -p "$icons"
+cp "$here/src/owui_pop/data/owui-pop.svg" "$icons/owui-pop.svg"
 command -v update-desktop-database >/dev/null 2>&1 && update-desktop-database "$apps" || true
 echo
 echo "Installed. Run 'owui-pop' (Settings opens on first run), then bind it to a key in your"

@@ -30,6 +30,9 @@ owui-pop = "owui_pop.app:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+owui_pop = ["data/*.svg"]
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]

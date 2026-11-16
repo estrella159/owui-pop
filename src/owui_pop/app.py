@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import os
 import sys
+from pathlib import Path
 
+from PyQt6.QtGui import QIcon
 from PyQt6.QtNetwork import QLocalServer, QLocalSocket
 from PyQt6.QtWidgets import QApplication
 
@@ -23,6 +25,7 @@ def main(argv: list[str] | None = None) -> int:
     app.setApplicationName("owui-pop")
     app.setDesktopFileName("owui-pop")
     app.setQuitOnLastWindowClosed(False)
+    app.setWindowIcon(QIcon.fromTheme("owui-pop", QIcon(str(Path(__file__).parent / "data" / "owui-pop.svg"))))
 
     sock = QLocalSocket()
     sock.connectToServer(SOCKET)
