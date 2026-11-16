@@ -1,0 +1,30 @@
+{
+  "worktree": {
+    "setup": [
+      "python3 -m venv .venv",
+      ".venv/bin/pip install -q -e \".[test]\" ruff"
+    ]
+  },
+  "scripts": {
+    "test": {
+      "command": "QT_QPA_PLATFORM=offscreen .venv/bin/pytest -q"
+    },
+    "lint": {
+      "command": ".venv/bin/ruff check src tests"
+    },
+    "run": {
+      "command": ".venv/bin/owui-pop"
+    }
+  },
+  "metadataGeneration": {
+    "branchName": {
+      "instructions": "Short lowercase names describing the change, e.g. settings-long-command or fix-math-blocks. No prefixes."
+    },
+    "commitMessage": {
+      "instructions": "Start with the area touched (Settings, Answers, README, CI…), a colon, then one plain-English sentence on what changes for the user. No Conventional Commits."
+    },
+    "pullRequest": {
+      "instructions": "One short paragraph on what changes for the user, then a Test plan section listing what was checked (pytest, ruff, manual run with screenshots if the UI changed)."
+    }
+  }
+}
