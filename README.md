@@ -1,5 +1,7 @@
 # owui-pop
 
+> **Archived.** Open WebUI now has an official desktop app, [Tether](https://github.com/open-webui/tether), with its own quick-ask overlay (Spotlight). I use that now. owui-pop still works, but it won't get updates.
+
 [![ci](https://github.com/estrella159/owui-pop/actions/workflows/ci.yml/badge.svg)](https://github.com/estrella159/owui-pop/actions/workflows/ci.yml)
 
 A quick-ask pop-up for [Open WebUI](https://github.com/open-webui/open-webui) on the Linux desktop.
